@@ -1,20 +1,14 @@
 const fs = require('fs/promises');
-// console.log(fs);
-  
+
 const myFileWriter = async (fileName, fileContent) => {
 	// write code here
 	// dont chnage function name
-	// let fileName = "./myFileWriter.txt";
-	// const fileContent = "Hello my name is anand sahu";
 	try{
 		 
-		await fs.writeFile("./myFileWriter.txt", "Hello My name is Anand Sahu");
+		await fs.writeFile('File.txt',' Hello ');
 	}catch(err){
 		console.log(err);
-	}
-	 
-
-	
+	}	
 }
 myFileWriter();
 
@@ -22,7 +16,7 @@ const myFileReader = async (fileName) => {
 	// write code here
 	// dont chnage function name
 	try{
-		const readfile =  await fs.readFile("./myFileWriter.txt", "utf-8");
+		const readfile =  await fs.readFile("./File.txt", "utf-8");
 		console.log(readfile);
 	}catch(err){
 		console.log(err);
@@ -35,7 +29,7 @@ const myFileUpdater = async (fileName, fileContent) => {
 	// write code here
 	// dont chnage function name
 	try{
-		await fs.appendFile("./myFileWriter.txt", " I am 22 years old");
+		await fs.appendFile("./File.txt", " World ");
 	}catch(err){
 		console.log(err);
 	}
@@ -46,7 +40,7 @@ const myFileDeleter = async (fileName) => {
 	// write code here
 	// dont chnage function name
 	try{
-		const deletefile = await fs.unlink("./myFileWriter.txt");
+		const deletefile = await fs.unlink("./File.txt");
 		console.log(deletefile);
 	}catch(err){
 		console.log(err);
